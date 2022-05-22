@@ -8,7 +8,7 @@ const path = require('path'),
     });
 
 function addText() {
-    readline.question('Add text\n', answer => {
+    readline.question('Add text:\n', answer => {
         if (answer === 'exit') {
             readline.close();
         } else {
