@@ -68,7 +68,7 @@ async function copy(srcPath, dstPath) {
     let files = await fsPromises.readdir(dstPath);
 
     for (let file of files) {
-        await fsPromises.rm(path.join(dstPath, file));
+        await fsPromises.rm(path.join(dstPath, file), { recursive: true, force: true });
     }
 
     files = await fsPromises.readdir(srcPath);
